@@ -4,7 +4,7 @@ body {
    padding:0;
    height:100%;
    background-image: url("http://blog.hostbaby.com/wp-content/uploads/2013/07/scuffedstatic_dark1400x900.jpg") !important;
-   background-size: auto !important;
+   background-size: cover !important;
    background-position: center !important;
    background-repeat: no-repeat !important;
    background-clip: border-box !important;
