@@ -54,7 +54,8 @@ span{
 .col-inside{
   -webkit-appearance: none;
   -webkit-border-radius: 50%;
-  border: 1px solid black;
+  border: 5px solid black;
+  box-shadow: 10px 10px 5px black;
   background-image: url("./towers.png");
   background-size: cover;
   background-position: center center;
