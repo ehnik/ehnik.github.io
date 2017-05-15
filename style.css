@@ -28,14 +28,23 @@ img.project{
 .caption{
   position: relative;
   top: 30px;
-  color: #000000  ;
+  color: #ff0000  ;
+  text-shadow: -1px 0 black, 0 1px black,
+      1px 0 black, 0 -1px black;
   text-align: center;
+  font-family: 'Inknut Antiqua', serif;
 }
 
 h2{
   text-align: center;
   margin-top: 120px;
   color: white;
+  font-family: 'Inknut Antiqua', serif;
+}
+
+nav{
+  font-family: 'Yrsa', serif;
+  font-size: 18px;
 }
 
 span{
@@ -78,6 +87,7 @@ span{
   text-align: center;
   position: relative;
   top: 50px;
+  font-family: 'PT Serif', serif;
 }
 
 .col-inside {
