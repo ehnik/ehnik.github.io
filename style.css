@@ -27,8 +27,8 @@ img.project{
 
 .caption{
   position: relative;
-  top: 85px;
-  color: white  ;
+  top: 30px;
+  color: #000000  ;
   text-align: center;
 }
 
@@ -76,6 +76,8 @@ span{
   font-size: 20px;
   color: white;
   text-align: center;
+  position: relative;
+  top: 50px;
 }
 
 .col-inside {
