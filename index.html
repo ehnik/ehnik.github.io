@@ -1,92 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Bootstrap 101 Template</title>
+    <title>Kay Ehni</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width">
     <link href="https://fonts.googleapis.com/css?family=Asap|EB+Garamond|Inknut+Antiqua|PT+Serif|Yrsa" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    function showMore() {
+        document.getElementById("extBio").classList.toggle("show");
+    }
+
+    $(function(){
+      $(".portfolio").click(function(){
+        $(this).addClass("active")
+      })
+    })
+
+    $(document).ready(function(){
+      $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+     //>=, not <=
+     if (scroll >= 500) {
+        //clearHeader, not clearheader - caps H
+        $(".portfolio").addClass("active")
+        $(".home").removeClass("active")
+        }
+     else{
+       $(".home").addClass("active");
+          if($(".portfolio").hasClass("active")){
+            $(".portfolio").removeClass("active")
+          }
+      }
+    })
+  })
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+      //makes nav dropdown apper
+      if (!e.target.matches('.dropbtn')) {
+        var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains('show')) {
+            myDropdown.classList.remove('show');
+          }
+      }
+
+      if (!e.target.matches('.more')) {
+        var moreBio = document.getElementById("extBio");
+          if (moreBio.classList.contains('show')) {
+            moreBio.classList.remove('show');
+          }
+      }
+    }
+
+
+    </script>
   </head>
 
 <body>
-
-<nav role="navigation">
-  <ul class="nav nav-pills nav-justified">
-  <li role="presentation" class="active"><a href="./index.html">Home</a></li>
-  <li role="presentation"><a href="./KatherineEhniResume.pdf">Resume</a></li>
-  <li role="presentation"><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
-<h2> Featured Projects </h2>
-<br>
-<div class ="absolute-wrapper">
-<div class="container-fluid" id="project-container">
-<div class="row">
-
-  <div class="col-xs-4 border col p-2">
-    <div id="project1" class="col-inside">
-      <a href="https://ehnik.github.io/project1/">
-      <span></span>
-      </a>
-      <div class="caption">
-        <h3>Towers of Hanoi</h3>
-      </div>
-  </div>
-</div>
-
-  <div class="col-xs-4 border col p-2">
-    <div id="project2" class="col-inside">
-      <div class="caption">
-        <h3>Loop</h3>
-        <h4>(coming soon)</h4>
+  <div class="navigation container-fluid">
+    <h1> Kay Ehni </h1>
+    <div class="row-fluid nav-contents">
+      <div class="col-sm-3 nav-link home"><a href="#home">Home</a></div>
+      <div class="col-sm-3 nav-link portfolio"><a href="#portfolio">Portfolio</a></div>
+      <div class="col-sm-3 nav-link"><a href="./KatherineEhniResume.pdf">Resume</a></div>
+      <div class="col-sm-3 nav-link dropbtn" onclick="myFunction()">Get in Touch</div>
+          <div class="dropdown-content" id="myDropdown">
+              <a id="linkedin" href="https://www.linkedin.com/in/kayehni/">LinkedIn</a>
+              <a href="mailto:kay.ehni@gmail.com">Email (kay.ehni@gmail.com)</a>
+              <a href="https://github.com/ehnik">Github</a>
+          </div>
       </div>
     </div>
-  </div>
 
-  <div class="col-xs-4 border col p-2">
-    <div id="project3" class="col-inside">
-      <div class="caption">
-        <h3>Battleship</h3>
-        <h4>(coming soon)</h4>
-      </div>
+<a name = "home"></a>
+<div class="master-container">
+  <div class="bio-container container-fluid">
+  <div class="row-fluid" id="bio">
+
+        <div id="headshot" class="col-sm-2">
+        </div>
+
+    <div class="col-sm-10" id="blurb">
+      <p> Hello, I'm Kay, a full-stack web developer. I am currently seeking project-based and full-time work.
+      My work focuses on full-stack development, including the MEAN stack and Ruby/Rails.
+      I bring my background in philosophy, linguistics, and psychology into code, with an eye for logic, semantic precision, and smooth user experience.
+      </p>
+      <button class="more" onclick="showMore()">More</button>
+      <p id="extBio">
+      I recently completed six months of full-time web development study, building on undergrad coursework in Data Structures and part-time ja.
+      This site is a custom template that I built (a thinly veiled excuse to mention my experience with CSS and responsive design).
+      </p>
     </div>
+
+  </div>
+</div>
+
+  <br>
+
+  <div id="projects" class="container-fluid">
+    <h2 id="heading"> Featured Projects </h2>
+  <a name = "portfolio"></a>
+    <div class="row-fluid" id="project-container">
+
+      <div class="col-sm-4">
+        <div id="project2" class="col-inside">
+          <div class="caption">
+            <h3>Loop</h3>
+            <h4>(coming soon)</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div id="project1" class="col-inside towers">
+          <a href="https://ehnik.github.io/project1/">
+            <span></span>
+          </a>
+          <div class="caption">
+            <h3>Towers of Hanoi</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4 col-centered">
+        <div id="project3" class="col-inside">
+          <div class="caption">
+            <h3>Battleship</h3>
+            <h4>(coming soon)</h4>
+          </div>
+        </div>
+      </div>
+
+  </div>
   </div>
 
-</div>
 
 </div>
-
-</div>
-
-<div id="blurb">
-    <h3> Hello! </h3>
-    <p> I'm Kay, a full-stack web developer in Washington, D.C.
-      I code using JavaScript, the MEAN stack, Ruby/Ruby on Rails, and more.
-      I love incorporating my background in philosophy and linguistics into code, and am eager to take on new projects.
-      Please see my work above.
-    </p>
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div id="blurb">
-    <a name = "contact"></a>
-    <h3> Contact </h3>
-    <p> <a href="https://www.linkedin.com/in/kayehni/">LinkedIn</a>  <a href="mailto:kay.ehni@gmail.com">Email</a>
-    </p>
-</div>
-
-
 
 </body>
 </html>
