@@ -13,7 +13,6 @@ body {
 .navigation{
   font-family: 'Yrsa', serif;
   font-size: 24px;
-  color: black;
   position:fixed;
   z-index:5;
   background-color:pink;
@@ -23,6 +22,10 @@ body {
 h1{
   text-align: center;
   margin: 0;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 45px;
+  color: #260d0d;
+  margin-bottom: 20px;
 }
 
 /*.nav-contents{
@@ -35,6 +38,7 @@ h1{
   outline:none;
   text-align: center;
   font-size: 24px;
+  color: #260d0d;
   cursor: pointer;
   height: 44px;
   /*overflow: hidden;*/
@@ -42,10 +46,7 @@ h1{
 
 .nav-link{
   height:44px;
-}
-
-.nav-link a{
-  color:white;
+  color: #260d0d;
   text-decoration:none;
   text-overflow: ellipsis;
 }
@@ -63,7 +64,7 @@ h1{
     display: none;
     position: absolute;
     left: 74.5%;
-    top: 44px;
+    top: 105px;
     /*background-color: #f9f9f9;*/
     height: 174px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -92,6 +93,11 @@ h1{
   padding: inherit;
 }
 
+.dropbtn{
+  color: #260d0d;
+;
+}
+
 .show {
     display: block;
 }
@@ -114,9 +120,9 @@ span{
 
 
 #projects{
-  height:400px;
+  min-height:800px;
   position: relative;
-  top: 225px;
+  top: 50px;
 }
 
 @media screen and (max-width: 609px) {
@@ -125,6 +131,10 @@ span{
       position: relative;
       top: 120px;
     }
+}
+
+h3{
+  text-align: center;
 }
 
 .col-inside {
@@ -190,14 +200,24 @@ h2{
   background-image: url("./towers.png");
 }
 
+.bio-container{
+  position: relative;
+  top:70px;
+}
+
 #bio{
   height: 532px;
+  display: flex;
+  flex-direction: column;
   /*height: 600px;*/
 }
 
-.bio-container{
-  position: relative;
-  top:175px;
+button{
+  border: 0px;
+  padding: 2px 15px;
+  border-radius: 10%;
+  font-size: 20px;
+  background-color:pink;
 }
 
 @media screen and (max-width: 767px) {
@@ -208,11 +228,11 @@ h2{
 }
 
 #blurb{
-  font-size: 27px;
+  font-size: 26px;
   color: black;
   text-align: center;
   font-family: 'PT Serif', serif;
-  overflow: hidden;
+  padding: 0 90px;
   /*display: inline-block;*/
 }
 
@@ -224,12 +244,20 @@ h2{
   height: 175px;
   width: 175px;
   border-radius: 40%;
-  margin: 0 auto;
+  margin: 20px auto;
   overflow:hidden;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 767px) {
+
+    #headshot{
+    }
 }
 
 #extBio{
   display:none;
+  top: 10px;
 }
 
 /*@media screen and (max-width: 609px) {
@@ -270,15 +298,6 @@ h2{
     }
 }
 
-/*#headshot:hover {
-    opacity: 1.0;
-    transition: opacity .55s ease-in-out;
-    -moz-transition: opacity .55s ease-in-out;
-    -webkit-transition: opacity .55s ease-in-out;
-}​
-
-
-
 /*.wood
 {
 	/*border:1px solid black;
@@ -298,13 +317,6 @@ h2{
 #master-contact{
   /*height:100%;*/
 }
-
-/*#contact{
-  position: relative;
-  top: 1px;
-  /*right: 45px;
-}
-*/
 
 #linkedin-icon{
   padding: 50px;
