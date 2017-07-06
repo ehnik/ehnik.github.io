@@ -200,6 +200,10 @@ h2{
   background-image: url("./towers.png");
 }
 
+.battleship{
+  background-image: url("./battleship_screenshot.tiff");
+}
+
 .bio-container{
   position: relative;
   top:70px;
