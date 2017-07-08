@@ -22,7 +22,7 @@ body {
 h1{
   text-align: center;
   margin: 0;
-  font-family: 'Inknut Antiqua', serif;
+  font-family: 'Volkhov', serif;
   font-size: 45px;
   color: #260d0d;
   margin-bottom: 20px;
@@ -50,6 +50,7 @@ h1{
   text-decoration:none;
   text-overflow: ellipsis;
 }
+
 .nav-link:hover {
     background-color: red;
     opacity: .5;
@@ -60,15 +61,39 @@ h1{
     opacity: .5;
 }
 
+@media screen and (max-width: 767px) {
+  .nav-link:hover{
+    opacity: 0.9;
+  }
+  .nav-link {
+    background-color: pink;
+    opacity: 0.9;
+  }
+}
+
+
 .dropdown-content {
     display: none;
     position: absolute;
     left: 74.5%;
     top: 105px;
-    /*background-color: #f9f9f9;*/
+    opacity: 0.9;
+    background-color: pink;
     height: 174px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 7;
+}
+
+@media screen and (max-width: 767px) {
+  .dropdown-content{
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 243px;
+    bottom: 0px;
+    width: 60%;
+  }
 }
 
 .dropdown-content a {
@@ -95,14 +120,14 @@ h1{
 
 .dropbtn{
   color: #260d0d;
-;
+}
+
+#email {
+  padding: 0px 16px;
 }
 
 .show {
     display: block;
-}
-
-@media screen and (max-width: 609px) {
 }
 
 span{
@@ -122,19 +147,91 @@ span{
 #projects{
   min-height:800px;
   position: relative;
-  top: 50px;
+  top: 60px;
 }
 
-@media screen and (max-width: 609px) {
+#projects.extended {
+  top: 200px;
+}
+
+/*@media screen and (max-width: 858px) {
 
     #projects{
-      position: relative;
-      top: 120px;
+      top: 300px;
+    }
+}
+*/
+@media screen and (min-width: 400px) and (max-width: 767px) {
+
+    #projects.extended{
+      top: 45px;
+    }
+
+    #extbio{
     }
 }
 
+
+/*@media screen and (max-width: 406px) {
+
+    #projects{
+      position: relative;
+      top:896px;
+    }
+}
+
+@media screen and (min-width: 407px) and (max-width: 500px) {
+
+    #projects{
+      position: relative;
+      top:896px;
+    }
+}
+*/
+
 h3{
   text-align: center;
+  position:relative;
+  pointer-events: none;
+}
+
+.col-sm-4 {
+  margin-bottom: 50px;
+}
+#project1 {
+  position: relative;
+  top: 26px;
+}
+
+#project2 {
+  position: relative;
+  top:26px;
+}
+
+@media screen and (min-width: 881px) and (max-width: 1183px) {
+
+    #project2{
+      top: 0px;
+    }
+}
+
+@media screen and (max-width: 881px) {
+
+    #project2{
+      top: 22px;
+    }
+    #project3{
+      position: relative;
+      top: 25px;
+    }
+}
+
+@media screen and (max-width: 873px) {
+
+    #project3{
+      position: relative;
+      top: 0px;
+    }
 }
 
 .col-inside {
@@ -145,7 +242,6 @@ h3{
     -webkit-transition: opacity 1s ease-in-out;
 }
 .col-inside:hover {
-  overflow: hidden;
     opacity: 1.0;
     transition: opacity .55s ease-in-out;
     -moz-transition: opacity .55s ease-in-out;
@@ -161,10 +257,11 @@ img.project{
   position: relative;
   top: 30px;
   color: white;
-  text-shadow: -1px 0 black, 0 1px black,
-      1px 0 black, 0 -1px black;
+  text-shadow: -1px 0 #ffe6e6, 0 1px #ffe6e6,
+      1px 0 #ffe6e6, 0 -1px #ffe6e6;
   text-align: center;
   font-family: 'Inknut Antiqua', serif;
+  color: #330000;
 }
 
 h2{
@@ -177,10 +274,10 @@ h2{
 }
 
 #project-container{
-  padding-top: 5%;
+  padding-top: 90px;
   height: 200px;
+align-items: center;
 }
-
 .col-inside{
   -webkit-appearance: none;
   -webkit-border-radius: 50%;
@@ -193,7 +290,9 @@ h2{
   background-position: center center;
   height: 200px;
   width: 200px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: visible;
 }
 
 .towers{
@@ -202,6 +301,7 @@ h2{
 
 .battleship{
   background-image: url("./battleship_screenshot.png");
+  margin: 0 auto;
 }
 
 .bio-container{
@@ -210,24 +310,27 @@ h2{
 }
 
 #bio{
+  margin-top: 20px;
   height: 532px;
   display: flex;
   flex-direction: column;
   /*height: 600px;*/
 }
 
-button{
-  border: 0px;
-  padding: 2px 15px;
-  border-radius: 10%;
+button {
+  width: 80px;
+  height: 30px;
+  padding: 0px;
   font-size: 20px;
-  background-color:pink;
+  text-align:center;
+  z-index: 7;
 }
 
 @media screen and (max-width: 767px) {
 
     #bio{
       top: 85px;
+      height: 1%;
     }
 }
 
@@ -237,6 +340,9 @@ button{
   text-align: center;
   font-family: 'PT Serif', serif;
   padding: 0 90px;
+  margin: 2% auto;
+  bottom: 50px;
+  width: 100%;
   /*display: inline-block;*/
 }
 
@@ -248,7 +354,7 @@ button{
   height: 175px;
   width: 175px;
   border-radius: 40%;
-  margin: 20px auto;
+  margin: 5px auto;
   overflow:hidden;
   flex-shrink: 0;
 }
@@ -256,6 +362,7 @@ button{
 @media screen and (max-width: 767px) {
 
     #headshot{
+      margin: 150px auto 0px;
     }
 }
 
@@ -273,8 +380,6 @@ button{
     }
 }
 */
-
-
 
 .wood
 {
