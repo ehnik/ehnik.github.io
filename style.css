@@ -304,6 +304,11 @@ align-items: center;
   margin: 0 auto;
 }
 
+.klatch{
+  background-image: url("./klatch-screenshot-copy.tiff");
+  margin: 0 auto;
+}
+
 .bio-container{
   position: relative;
   top:70px;
