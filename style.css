@@ -208,12 +208,12 @@ h3{
   top:26px;
 }
 
-@media screen and (min-width: 881px) and (max-width: 1183px) {
+/*@media screen and (min-width: 881px) and (max-width: 1183px) {
 
     #project2{
       top: 0px;
     }
-}
+}*/
 
 @media screen and (max-width: 881px) {
 
@@ -231,6 +231,9 @@ h3{
     #project3{
       position: relative;
       top: 0px;
+    }
+    #project2{
+      top: 22px;
     }
 }
 
