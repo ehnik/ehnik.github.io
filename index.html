@@ -33,7 +33,44 @@
       })
     })
 
+    $( window ).resize(function() {
+      if ($(window).width()>767){
+        if($(".hover-project1").hasClass("show")){
+          $(".hover-project1").removeClass("show")
+        }
+        if($(".hover-project2").hasClass("show")){
+          $(".hover-project2").removeClass("show")
+        }
+        if($(".hover-project3").hasClass("show")){
+          $(".hover-project3").removeClass("show")
+        }
+      }
+    })
+
     $(document).ready(function(){
+      $("#project1").hover(function(){
+        $(".hover-project1").toggleClass("unhover")
+      })
+
+      $("#project2").hover(function(){
+        $(".hover-project2").toggleClass("unhover")
+      })
+
+      $("#project3").hover(function(){
+        $(".hover-project3").toggleClass("unhover")
+      })
+
+      $(".project-desc1").click(function(){
+        $(".hover-project1").toggleClass("show")
+      })
+
+      $(".project-desc2").click(function(){
+        $(".hover-project2").toggleClass("show")
+      })
+
+      $(".project-desc3").click(function(){
+        $(".hover-project3").toggleClass("show")
+      })
       $(window).scroll(function() {
         var scroll = $(window).scrollTop();
 
@@ -53,6 +90,17 @@
   })
 
     // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+      //makes nav dropdown apper
+      if (!e.target.matches('.dropbtn')) {
+        var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains('show')) {
+            myDropdown.classList.remove('show');
+          }
+      }
+
+    }
+
     window.onclick = function(e) {
       //makes nav dropdown apper
       if (!e.target.matches('.dropbtn')) {
@@ -96,7 +144,7 @@
       My work focuses on full-stack development, including the MEAN stack and Ruby/Rails.
       I bring my background in philosophy, linguistics, and psychology into code, with an eye for logic, semantic precision, and smooth user experience.
       </p>
-      <button class="more" onclick="showMore()">More
+      <button class="more"> More
       </button>
       <p id="extBio">
       I recently completed six months of full-time web development study,
@@ -116,39 +164,68 @@
     <div class="row-fluid" id="project-container">
 
       <div class="col-sm-4">
-        <h3 id="project2-heading" class="one-line-caption">Full-Stack (Ruby, AWS, PostreSQL)</h3>
-        <div id="project2" class="col-inside klatch">
-          <a href="https://klatch-app.herokuapp.com/">
+        <h3 id="project2-heading" class="one-line-caption caption-heading">Full-Stack (Ruby/Rails, AWS and PostgreSQL)</h3>
+        <a class="token-link" href="https://klatch-app.herokuapp.com/">
+          <div id="project2" class="col-inside klatch">
             <span></span>
-          </a>
           <div class="caption">
             <h3>Klatch</h3>
-            <h4>(coming soon)</h4>
           </div>
+        </div>
+        </a>
+        <button class="project-desc project-desc2">
+          More
+        </button>
+        <div class="hover-project2 project-token">
+          Klatch is a link-sharing platform that gives users a content feed curated by
+          their friends.
+          <br>
+          <br>
+          It is written in Rails/jQuery and uses ActiveRecord/PostgreSQL and Amazon Web Services
+          for database management and image storage, respectively.
         </div>
       </div>
 
       <div class="col-sm-4">
-        <h3 id="project1-heading" class="one-line-caption">Front-End (JavaScript)</h3>
+        <h3 id="project1-heading" class="one-line-caption caption-heading">Front-End (JavaScript)</h3>
+        <a class="token-link" href="https://ehnik.github.io/project1/">
         <div id="project1" class="col-inside towers">
-          <a href="https://ehnik.github.io/project1/">
             <span></span>
-          </a>
           <div class="caption">
             <h3>Towers of Hanoi</h3>
+            <br>
+            <br>
           </div>
+        </div>
+        </a>
+        <button class="project-desc project-desc1">
+          More
+        </button>
+        <div class="hover-project1 project-token">
+          Towers of Hanoi is a puzzle game featuring a drag-and-click interface, multiple levels of difficulty,
+          score- and completion-time tracking.
+          <br>
+          <br>
+          It is written in JavaScript and jQuery.
         </div>
       </div>
 
       <div class="col-sm-4 col-centered">
-        <h3 id="project3-heading" class="one-line-caption">Full-Stack (Ruby/Rails and PostgreSQL)</h3>
+        <h3 id="project3-heading" class="one-line-caption caption-heading">Full-Stack (Ruby/Rails and PostgreSQL)</h3>
+        <a class="token-link" href="https://battleship-ke.herokuapp.com/">
         <div id="project3" class="col-inside battleship">
-          <a href="https://battleship-ke.herokuapp.com/">
             <span></span>
-          </a>
           <div class="caption">
             <h3>Battleship</h3>
           </div>
+        </div>
+        </a>
+        <button class="project-desc project-desc3">
+          More
+        </button>
+        <div class="hover-project3 project-token">
+          Battleship is a classic strategy game originally written in Ruby for the CLI and converted into Rails.
+          It uses PostgreSQL/ActiveRecord for database management and object relational mapping.
         </div>
       </div>
 

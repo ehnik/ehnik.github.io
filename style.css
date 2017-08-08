@@ -171,7 +171,77 @@ span{
     }
 }
 
+.caption-heading{
+  height: 52px;
+}
 
+
+.nav-link:hover {
+    background-color: red;
+    opacity: .5;
+}
+
+.project-token{
+  font-size: 18px;
+  text-align: center;
+}
+
+
+.hover-project1{
+  display: none;
+  margin-top: 5%;
+}
+
+.hover-project2{
+  display: none;
+  margin-top: 5%;
+}
+
+.hover-project3{
+  display: none;
+  margin-top: 5%;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .hover-project1.unhover{
+      display: block;
+      margin-top: 15%;
+    }
+    .hover-project2.unhover{
+      display: block;
+      margin-top: 15%;
+    }
+    .hover-project3.unhover{
+      display: block;
+      margin-top: 15%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .hover-project1.unhover{
+      display: none;
+    }
+    .hover-project2.unhover{
+      display: none;
+    }
+    .hover-project3.unhover{
+      display: none;
+    }
+}
+
+a.token-link{
+  text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
+
+    .col-inside{
+      bottom:10%;
+    }
+}
 /*@media screen and (max-width: 406px) {
 
     #projects{
@@ -208,6 +278,11 @@ h3{
   top:26px;
 }
 
+#project3 {
+  position: relative;
+  top:26px;
+}
+
 /*@media screen and (min-width: 881px) and (max-width: 1183px) {
 
     #project2{
@@ -215,7 +290,7 @@ h3{
     }
 }*/
 
-@media screen and (max-width: 881px) {
+/*@media screen and (max-width: 881px) {
 
     #project2{
       top: 22px;
@@ -237,6 +312,7 @@ h3{
     }
 }
 
+*/
 .col-inside {
   overflow: hidden;
     opacity: 0.6;
@@ -281,6 +357,7 @@ h2{
   height: 200px;
 align-items: center;
 }
+
 .col-inside{
   -webkit-appearance: none;
   -webkit-border-radius: 50%;
@@ -298,18 +375,39 @@ align-items: center;
   overflow: visible;
 }
 
+/*@media screen and (max-width: 767px) {
+
+    .col-inside{
+      margin-bottom: 50px;
+    }
+}
+*/
 .towers{
   background-image: url("./towers.png");
 }
 
 .battleship{
   background-image: url("./battleship_screenshot.png");
-  margin: 0 auto;
 }
 
 .klatch{
   background-image: url("./klatch-screenshot.png");
-  margin: 0 auto;
+}
+
+.project-desc {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  position: relative;
+  display: none;
+  color: black;
+}
+
+@media screen and (max-width: 767px) {
+
+    .project-desc{
+      display: block;
+    }
 }
 
 .bio-container{
