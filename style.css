@@ -477,6 +477,10 @@ button {
   top: 10px;
 }
 
+#heading-explain{
+  font-family: 'Inknut Antiqua', serif;
+}
+
 /*@media screen and (max-width: 609px) {
 
     #blurb{

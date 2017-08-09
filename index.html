@@ -12,108 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-    /* When the user clicks on the button,
-    toggle between hiding and showing the dropdown content */
-    function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-    }
-
-    $(function(){
-      $(".portfolio").click(function(){
-        $(this).addClass("active")
-      })
-    })
-
-    $(function(){
-      $(".more").click(function(){
-        $("#extBio").toggleClass("show")
-        $("#projects").toggleClass("extended")
-
-      })
-    })
-
-    $( window ).resize(function() {
-      if ($(window).width()>767){
-        if($(".hover-project1").hasClass("show")){
-          $(".hover-project1").removeClass("show")
-        }
-        if($(".hover-project2").hasClass("show")){
-          $(".hover-project2").removeClass("show")
-        }
-        if($(".hover-project3").hasClass("show")){
-          $(".hover-project3").removeClass("show")
-        }
-      }
-    })
-
-    $(document).ready(function(){
-      $("#project1").hover(function(){
-        $(".hover-project1").toggleClass("unhover")
-      })
-
-      $("#project2").hover(function(){
-        $(".hover-project2").toggleClass("unhover")
-      })
-
-      $("#project3").hover(function(){
-        $(".hover-project3").toggleClass("unhover")
-      })
-
-      $(".project-desc1").click(function(){
-        $(".hover-project1").toggleClass("show")
-      })
-
-      $(".project-desc2").click(function(){
-        $(".hover-project2").toggleClass("show")
-      })
-
-      $(".project-desc3").click(function(){
-        $(".hover-project3").toggleClass("show")
-      })
-      $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
-
-     //>=, not <=
-     if (scroll >= 500) {
-        //clearHeader, not clearheader - caps H
-        $(".portfolio").addClass("active")
-        $(".home").removeClass("active")
-        }
-     else{
-       $(".home").addClass("active");
-          if($(".portfolio").hasClass("active")){
-            $(".portfolio").removeClass("active")
-          }
-      }
-    })
-  })
-
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(e) {
-      //makes nav dropdown apper
-      if (!e.target.matches('.dropbtn')) {
-        var myDropdown = document.getElementById("myDropdown");
-          if (myDropdown.classList.contains('show')) {
-            myDropdown.classList.remove('show');
-          }
-      }
-
-    }
-
-    window.onclick = function(e) {
-      //makes nav dropdown apper
-      if (!e.target.matches('.dropbtn')) {
-        var myDropdown = document.getElementById("myDropdown");
-          if (myDropdown.classList.contains('show')) {
-            myDropdown.classList.remove('show');
-          }
-      }
-
-    }
-
-
-    </script>
+    <script type="text/javascript" src="script.js"></script>
   </head>
 
 <body>
@@ -160,6 +59,7 @@
 
   <div id="projects" class="container-fluid">
     <h2 id="heading"> Featured Projects </h2>
+    <h3 id="heading-explain"> (click on a project to see the full version) </h3>
   <a name = "portfolio"></a>
     <div class="row-fluid" id="project-container">
 
@@ -206,7 +106,7 @@
           score- and completion-time tracking.
           <br>
           <br>
-          It is written in JavaScript and jQuery.
+          Written in JavaScript and jQuery.
         </div>
       </div>
 
